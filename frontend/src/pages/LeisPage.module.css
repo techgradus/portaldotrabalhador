@@ -1,0 +1,271 @@
+.page {
+  min-height: 60vh;
+}
+
+.pageHeader {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0 24px;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.pageDesc {
+  font-size: 15px;
+  color: var(--text-mid);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding: 32px 0 48px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-self: flex-start;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  position: sticky;
+  top: 88px;
+}
+
+.sidebarTitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  padding: 0 8px;
+}
+
+.catBtn {
+  text-align: left;
+  padding: 9px 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-mid);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.catBtn:hover {
+  background: var(--bg);
+  color: var(--navy);
+}
+
+.catBtnActive {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.catBtnActive:hover {
+  background: var(--navy-light);
+  color: var(--white);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0 16px;
+  height: 48px;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-light);
+}
+
+.searchInput {
+  flex: 1;
+  height: 100%;
+  font-size: 14px;
+  color: var(--text-dark);
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.searchInput::placeholder {
+  color: var(--text-light);
+}
+
+.count {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  border-color: var(--navy-pale);
+  box-shadow: var(--shadow-md);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardCat {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--amber-pale);
+  color: var(--amber);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.cardTempo {
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.35;
+}
+
+.cardResumo {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.cardLer {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 4px;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .sidebarTitle {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .pageHeader {
+    padding: 22px 0 20px;
+  }
+
+  .pageTitle {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .pageDesc {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .layout {
+    gap: 22px;
+    padding: 24px 0 40px;
+  }
+
+  .sidebar {
+    margin-bottom: 0;
+    padding: 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .catBtn {
+    padding: 8px 10px;
+    font-size: 12.5px;
+  }
+
+  .searchBar {
+    padding: 0 12px;
+    height: 44px;
+  }
+
+  .searchInput {
+    font-size: 13.5px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .cardTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cardTitle {
+    font-size: 14.5px;
+  }
+
+  .cardResumo {
+    font-size: 13px;
+  }
+}

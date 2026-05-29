@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Categoria {
+  id         Int      @id @default(autoincrement())
+  nome       String   @unique
+  slug       String   @unique
+  created_at DateTime @default(now())
+  artigos    Artigo[]
+}
+
+model Artigo {
+  id           Int        @id @default(autoincrement())
+  titulo       String
+  slug         String     @unique
+  resumo       String?
+  corpo        String
+  categoria_id Int?
+  categoria    Categoria? @relation(fields: [categoria_id], references: [id], onDelete: SetNull)
+  tempo_leitura String?
+  status       String     @default("rascunho")
+  created_at   DateTime   @default(now())
+  updated_at   DateTime   @updatedAt
+}
+
+model ChatLog {
+  id              Int      @id @default(autoincrement())
+  session_id      String
+  mensagem_usuario String
+  resposta_gui    String
+  created_at      DateTime @default(now())
+}
+
+model MetricasCalculadora {
+  id         Int      @id @default(autoincrement())
+  tipo       String
+  created_at DateTime @default(now())
+}
