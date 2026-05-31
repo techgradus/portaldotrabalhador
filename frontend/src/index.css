@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #0F2D5F;
+  --navy-light: #1E4A8C;
+  --navy-pale: #EEF3FB;
+  --amber: #E8A020;
+  --amber-light: #F9B94B;
+  --amber-pale: #FEF3D6;
+  --green: #1B7A4A;
+  --green-pale: #E6F4ED;
+  --red: #C92A2A;
+  --red-pale: #FFF0F0;
+  --gray-pale: #F6F7FA;
+  --white: #FFFFFF;
+  --bg: #F2F4F8;
+  --dark: #090E16;
+  --text-dark: #0D1117;
+  --text-mid: #4B5563;
+  --text-light: #9CA3AF;
+  --border: #E5E7EB;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.04);
+  --font: 'Poppins', sans-serif;
+  --transition: 180ms ease;
+}
+
+:root[data-theme='dark'] {
+  --navy: #A7C7FF;
+  --navy-light: #D4E3FF;
+  --navy-pale: #22334F;
+  --amber: #FFD166;
+  --amber-light: #FFE19A;
+  --amber-pale: #473713;
+  --green: #72E3AA;
+  --green-pale: #193B2A;
+  --red: #FF8A8A;
+  --red-pale: #3A1F23;
+  --gray-pale: #202633;
+  --white: #181D27;
+  --bg: #0B0F17;
+  --dark: #05070C;
+  --text-dark: #F8FAFC;
+  --text-mid: #D7DEE9;
+  --text-light: #B3BDCC;
+  --border: #354052;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.25);
+  --shadow-md: 0 6px 16px rgba(0,0,0,0.35), 0 2px 4px rgba(0,0,0,0.24);
+  --shadow-lg: 0 14px 36px rgba(0,0,0,0.48), 0 4px 8px rgba(0,0,0,0.32);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: var(--font);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3, p, a, button, span, label {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  min-width: 0;
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 16px;
+  }
+}

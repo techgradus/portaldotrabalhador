@@ -1,0 +1,117 @@
+.root {
+  display: grid;
+  grid-template-columns: 224px 1fr;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.sidebar {
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.brandMark {
+  width: 36px;
+  height: 36px;
+  background: var(--navy-light);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.62);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 12px;
+}
+
+.link {
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.52);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.link:hover {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.82);
+}
+
+.linkActive {
+  background: var(--navy-light);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.linkActive:hover {
+  background: var(--navy-light);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 28px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbarTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  flex: 1;
+  padding: 28px;
+}
